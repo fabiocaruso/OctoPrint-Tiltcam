@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_TiltCam/templates *
+recursive-include octoprint_TiltCam/translations *
+recursive-include octoprint_TiltCam/static *
