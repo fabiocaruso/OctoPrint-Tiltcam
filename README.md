@@ -15,3 +15,6 @@ the plugin manager.
 ## Configuration
 
 **TODO:** Describe your plugin's configuration options (if any).
+=======
+# TiltCam
+A pan tilt camera plugin for octoprint.
