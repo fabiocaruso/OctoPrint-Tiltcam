@@ -1,1 +1,7 @@
 /* TODO: Have your plugin's CSS files generated to here. */
+
+#cview {
+	background-color: red;
+	width: 500px;
+	height: 500px;
+}

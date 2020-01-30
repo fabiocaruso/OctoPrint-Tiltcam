@@ -33,7 +33,7 @@ plugin_url = "https://github.com/fabiocaruso/OctoPrint-Tiltcam"
 plugin_license = "MIT"
 
 # Any additional requirements besides OctoPrint should be listed here
-plugin_requires = []
+plugin_requires = ["pigpio>=1.45"]
 
 ### --------------------------------------------------------------------------------------------------------------------
 ### More advanced options that you usually shouldn't have to touch follow after this point
