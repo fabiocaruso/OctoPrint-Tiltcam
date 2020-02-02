@@ -13,6 +13,8 @@ This plugin should work with all pan tilt stands that have two servos for X and 
 It is recommended to use slow servos to smooth out motions.
 - Camera:
 You can find a compatibility list [here](https://github.com/foosel/OctoPrint/wiki/Webcams-known-to-work)
+- Raspberry Pi:
+Currently only RPi 3 and older is supported ([pigpio](http://abyz.me.uk/rpi/pigpio/))
 #### Software
 **&#10071;&#10071;&#10071;IN ORDER TO WORK PROPERLY YOU NEED TO INSTALL PIGPIOD MANUALLY&#10071;&#10071;&#10071;**  
 ```sudo apt install pigpiod```  
