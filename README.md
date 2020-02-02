@@ -1,4 +1,4 @@
-# OctoPrint-Tiltcam
+# OctoPrint-Tiltcam &#x1F4F7;
 
 This plugin adds a new tab to control a [pan tilt stand](https://de.aliexpress.com/item/2048998846.html?spm=a2g0o.productlist.0.0.66692b12ZJAJIk&algo_pvid=c0d9bf2b-ebfc-4a9b-b1e3-87eaf26f9300&algo_expid=c0d9bf2b-ebfc-4a9b-b1e3-87eaf26f9300-0&btsid=b421ad8d-d002-4e9b-9c55-5e1982c82b8a&ws_ab_test=searchweb0_0,searchweb201602_10,searchweb201603_53) with a [camera](https://de.aliexpress.com/item/32669557411.html?spm=a2g0o.productlist.0.0.328e570dHcoaKl&algo_pvid=940b6a7d-e67c-4b68-8f6f-2f652d8427cc&algo_expid=940b6a7d-e67c-4b68-8f6f-2f652d8427cc-16&btsid=fcc6191e-e5eb-4bd9-b233-5d50490863f6&ws_ab_test=searchweb0_0,searchweb201602_10,searchweb201603_53) on top.
 
@@ -14,7 +14,7 @@ It is recommended to use slow servos to smooth out motions.
 - Camera:
 You can find a compatibility list [here](https://github.com/foosel/OctoPrint/wiki/Webcams-known-to-work)
 #### Software
-**IN ORDER TO FUNCTION PROPERLY YOU NEED TO INSTALL PIGPIOD MANUALLY:**  
+**&#10071;&#10071;&#10071;IN ORDER TO WORK PROPERLY YOU NEED TO INSTALL PIGPIOD MANUALLY&#10071;&#10071;&#10071;**  
 ```sudo apt install pigpiod```  
 ```reboot```  
 or if you want a detailed instruction click [here]()  
