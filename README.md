@@ -26,8 +26,8 @@ or manually using this URL:
     https://github.com/fabiocaruso/OctoPrint-Tiltcam/archive/master.zip
 
 ## Configuration
-On the first start of Octoprint you'll be asked by a wizard to enter the two GPIO pins numbers where your servos for the X and Y axis are connected. Enter the hardware GPIO number.  
-You'll also be noticed if the plugin can't connect to the pigpio daemon, if so, you need to (re-)install it.
+On the first start of Octoprint you'll be asked by a wizard to enter the two GPIO pin numbers where your servos for the X and Y axis are connected. Enter the hardware GPIO number.  
+You'll also be noticed if the plugin can't connect to the pigpio daemon, if so, you need to (re-)install pigpiod.
 
 ## TODO
 - Pigpiod wizard installation
