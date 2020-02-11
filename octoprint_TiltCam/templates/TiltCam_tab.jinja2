@@ -1,6 +1,8 @@
+<script src="{{ url_for("static", filename="js/lib/jquery/jquery.min.js") }}"></script>
+<script src="{{ url_for("static", filename="js/lib/lodash.min.js") }}"></script>
+<script type="text/javascript" src="{{ url_for("static", filename="webassets/packed_client.js") }}"></script>
+<p id="status">{{ plugin_TiltCam_status }}</p>
 <div id="cview" data-bind="
 	event: {mousemove: cviewmm, mousedown: cviewmd, mouseup: cviewmu}, 
 	style: {backgroundImage: bgImage}
 "></div>
-<p data-bind="text: x">x</p>
-<p data-bind="text: y">y</p>

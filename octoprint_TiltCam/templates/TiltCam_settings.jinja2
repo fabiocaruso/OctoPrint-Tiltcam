@@ -1,14 +1,53 @@
 <div id="general">
 	<div>
 		<label for="xgpio">GPIO X-Axis:</label>
-		<input name="xgpio" id="xgpio" type="number" min="1" max="26"  data-bind="value: settings.plugins.TiltCam.xgpio"/>
+		<input id="xgpio" type="number" min="1" max="26" data-bind="value: settings.plugins.TiltCam.xgpio"/>
 	</div>
 	<div>
 		<label for="ygpio">GPIO Y-Axis:</label>
-		<input name="ygpio" id="ygpio" type="number" min="1" max="26"  data-bind="value: settings.plugins.TiltCam.ygpio"/>	
+		<input id="ygpio" type="number" min="1" max="26" data-bind="value: settings.plugins.TiltCam.ygpio"/>	
 	</div>
-	<div>
-		<label for="vid">Video Input Device:</label>
-		<input name="vid" id="vid" type="text"  data-bind="value: settings.plugins.TiltCam.vid"/>
+	<div class="advanced_options">
+		<div>
+			<small>
+				<a href="#" class="muted" data-bind="toggleContent: { class: 'fa-caret-right fa-caret-down', parent: '.advanced_options', container: '.hide' }">
+					<i class="fa fa-caret-down"></i> {{ _('Advanced options') }}
+				</a>
+			</small>
+		</div>
+		<div class="hide indent">
+			<div>
+				<label for="startingPointCb" style="float: left;">Starting Point:</label>
+				<input id="startingPointCb" type="checkbox" data-bind="checked: settings.plugins.TiltCam.startingPoint, click: startingPoint"/>
+			</div>
+			<div class="startingPoint indent">
+				<div>
+					<label for="xstart">Starting Point X (0-1000):</label>
+					<input id="xstart" type="number" min="0" max="1000" data-bind="value: settings.plugins.TiltCam.xstart"/>
+				</div>
+				<div>
+					<label for="ystart">Starting Point Y (0-1000):</label>
+					<input id="ystart" type="number" min="0" max="1000" data-bind="value: settings.plugins.TiltCam.ystart"/>	
+				</div>
+			</div>
+			<div>
+				<div>
+					<label for="xRangeMin">Range X Min (500-1499):</label>
+					<input id="xRangeMin" type="number" min="500" max="1499" data-bind="value: settings.plugins.TiltCam.xRangeMin"/>
+				</div>
+				<div>
+					<label for="xRangeMax">Range X Max (1500-2600):</label>
+					<input id="xRangeMax" type="number" min="1500" max="2600" data-bind="value: settings.plugins.TiltCam.xRangeMax"/>
+				</div>
+				<div>
+					<label for="yRangeMin">Range Y Min (500-1499):</label>
+					<input id="yRangeMin" type="number" min="500" max="1499" data-bind="value: settings.plugins.TiltCam.yRangeMin"/>
+				</div>
+				<div>
+					<label for="yRangeMax">Range Y Max (1500-2600):</label>
+					<input id="yRangeMax" type="number" min="1500" max="2600" data-bind="value: settings.plugins.TiltCam.yRangeMax"/>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
