@@ -22,12 +22,12 @@
 			</div>
 			<div class="startingPoint indent">
 				<div>
-					<label for="xstart">Starting Point X (0-1000):</label>
-					<input id="xstart" type="number" min="0" max="1000" data-bind="value: settings.plugins.TiltCam.xstart"/>
+					<label for="xstart">Starting Point X (0-{{ plugin_TiltCam_xRangeMax - plugin_TiltCam_xRangeMin }}):</label>
+					<input id="xstart" type="number" min="0" max="{{ plugin_TiltCam_xRangeMax - plugin_TiltCam_xRangeMin }}" data-bind="value: settings.plugins.TiltCam.xstart"/>
 				</div>
 				<div>
-					<label for="ystart">Starting Point Y (0-1000):</label>
-					<input id="ystart" type="number" min="0" max="1000" data-bind="value: settings.plugins.TiltCam.ystart"/>	
+					<label for="ystart">Starting Point Y (0-{{ plugin_TiltCam_yRangeMax - plugin_TiltCam_yRangeMin }}):</label>
+					<input id="ystart" type="number" min="0" max="{{ plugin_TiltCam_yRangeMax - plugin_TiltCam_yRangeMin }}" data-bind="value: settings.plugins.TiltCam.ystart"/>	
 				</div>
 			</div>
 			<div>
@@ -36,16 +36,16 @@
 					<input id="xRangeMin" type="number" min="500" max="1499" data-bind="value: settings.plugins.TiltCam.xRangeMin"/>
 				</div>
 				<div>
-					<label for="xRangeMax">Range X Max (1500-2600):</label>
-					<input id="xRangeMax" type="number" min="1500" max="2600" data-bind="value: settings.plugins.TiltCam.xRangeMax"/>
+					<label for="xRangeMax">Range X Max (1500-2500):</label>
+					<input id="xRangeMax" type="number" min="1500" max="2500" data-bind="value: settings.plugins.TiltCam.xRangeMax"/>
 				</div>
 				<div>
 					<label for="yRangeMin">Range Y Min (500-1499):</label>
 					<input id="yRangeMin" type="number" min="500" max="1499" data-bind="value: settings.plugins.TiltCam.yRangeMin"/>
 				</div>
 				<div>
-					<label for="yRangeMax">Range Y Max (1500-2600):</label>
-					<input id="yRangeMax" type="number" min="1500" max="2600" data-bind="value: settings.plugins.TiltCam.yRangeMax"/>
+					<label for="yRangeMax">Range Y Max (1500-2500):</label>
+					<input id="yRangeMax" type="number" min="1500" max="2500" data-bind="value: settings.plugins.TiltCam.yRangeMax"/>
 				</div>
 			</div>
 		</div>

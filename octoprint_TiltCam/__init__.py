@@ -21,13 +21,13 @@ class TiltcamPlugin(octoprint.plugin.StartupPlugin,
 
         def on_settings_initialized(self):
                 self.status = ""
-                self.RANGE_X = [500, 2500]
-                self.RANGE_Y = [500, 2500]
+                self.RANGE_X = [self._settings.get_int(["xRangeMin"]), self._settings.get_int(["xRangeMax"])]
+                self.RANGE_Y = [self._settings.get_int(["yRangeMin"]), self._settings.get_int(["yRangeMax"])]
                 refx = self._settings.get_int(["xstart"]) + self.RANGE_X[0]
                 refy = self._settings.get_int(["ystart"]) + self.RANGE_Y[0]
                 lastx = self._settings.get_int(["xlast"])
                 lasty = self._settings.get_int(["ylast"])
-                if (lastx is not None) and (lasty is not None):
+                if (lastx is not None) and (lasty is not None) and (self._settings.get_boolean(["startingPoint"]) == False):
                     refx = lastx
                     refy = lasty
                 self.refPoint = [refx, refy]
@@ -36,7 +36,7 @@ class TiltcamPlugin(octoprint.plugin.StartupPlugin,
                     self.pi.set_servo_pulsewidth(self._settings.get_int(["xgpio"]), refx)
                     self.pi.set_servo_pulsewidth(self._settings.get_int(["ygpio"]), refy)
                 except:
-                    self.status = "Pigpiod is not running!<br/>Please follow these <a href='#'>instuctions</a> to setup."
+                    self.status = "Pigpiod is not running!<br/>Please follow these <a href='https://github.com/fabiocaruso/OctoPrint-Tiltcam/blob/master/docs/pigpiod_installation.md'>instuctions</a> to setup."
 
         ##~~ WizardPlugin mixin
 
@@ -63,7 +63,6 @@ class TiltcamPlugin(octoprint.plugin.StartupPlugin,
                 if command == "move":
                         stepX = (self.RANGE_X[1] - self.RANGE_X[0]) * data["x"]
                         stepY = (self.RANGE_Y[1] - self.RANGE_Y[0]) * data["y"]
-                        #TODO: Range check; not 0 or 500-2500
                         abX = self.refPoint[0] + stepX
                         abY = self.refPoint[1] + stepY
                         if self.RANGE_X[0] <= abX <= self.RANGE_X[1] and self.RANGE_Y[0] <= abY <= self.RANGE_Y[1]:
@@ -93,9 +92,9 @@ class TiltcamPlugin(octoprint.plugin.StartupPlugin,
                 xstart=600,
                 ystart=600,
                 xRangeMin=500,
-                xRangeMax=2600,
+                xRangeMax=2500,
                 yRangeMin=500,
-                yRangeMax=2600,
+                yRangeMax=2500,
                 xlast=None,
                 ylast=None
             )
@@ -158,7 +157,7 @@ __plugin_name__ = "Tiltcam Plugin"
 # compatibility flags according to what Python versions your plugin supports!
 #__plugin_pythoncompat__ = ">=2.7,<3" # only python 2
 #__plugin_pythoncompat__ = ">=3,<4" # only python 3
-#__plugin_pythoncompat__ = ">=2.7,<4" # python 2 and 3
+__plugin_pythoncompat__ = ">=2.7,<4" # python 2 and 3
 
 def __plugin_load__():
         global __plugin_implementation__

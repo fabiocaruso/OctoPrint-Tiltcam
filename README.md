@@ -19,11 +19,11 @@ Currently only RPi 3 and older is supported ([pigpio](http://abyz.me.uk/rpi/pigp
 **&#10071;&#10071;&#10071;IN ORDER TO WORK PROPERLY YOU NEED TO INSTALL PIGPIOD MANUALLY&#10071;&#10071;&#10071;**  
 ```sudo apt install pigpiod```  
 ```reboot```  
-or if you want a detailed instruction click [here]()  
+or if you want a detailed instruction click [here](https://github.com/fabiocaruso/OctoPrint-Tiltcam/blob/master/docs/pigpiod_installation.md) 
 
 ### Installation
-Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
-or manually using this URL:
+~~Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
+or~~ manually using this URL:
 
     https://github.com/fabiocaruso/OctoPrint-Tiltcam/archive/master.zip
 
@@ -33,6 +33,7 @@ You'll also be noticed if the plugin can't connect to the pigpio daemon, if so, 
 
 ## TODO
 - Pigpiod wizard installation
-- Speed improvements (websocket)
+- Speed improvements (websocket, talk directly to pigpiod)
 - Integration in controls tab
+- Translations
 - Add to offical repo
